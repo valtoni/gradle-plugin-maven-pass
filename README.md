@@ -1,4 +1,7 @@
-# gradle-plugin-maven-pass
+# gradle-plugin-maven-pass :ambulance:
+
+:ambulance: This is a rescue project
+
 This is a plugin to obtain settings.xml credentials.
 
 Add dependency below to your project:
