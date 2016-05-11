@@ -9,6 +9,33 @@ group = 'info.boaventura'
 archivesBaseName = 'gradle-build-maven-credentials'
 version = '1.0.0'
 
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "com.gradle.publish:plugin-publish-plugin:0.9.4"
+  }
+}
+
+apply plugin: 'com.gradle.plugin-publish'
+
+pluginBundle {
+  website = 'https://github.com/valtoni/gradle-plugin-maven-pass'
+  vcsUrl = 'https://github.com/valtoni/gradle-plugin-maven-pass'
+  description = 'This is a plugin to obtain settings.xml from maven credentials.'
+  tags = ['credentials', 'maven']
+
+  plugins {
+    credentialsPlugin {
+      id = 'info.boaventura.maven.credentials'
+      displayName = 'Gain credentials from maven settings.xml'
+    }
+  }
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
