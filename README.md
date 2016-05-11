@@ -9,7 +9,7 @@ Add dependency below to your project:
 ```
 buildscript {
   dependencies {
-    classpath group: 'info.boaventura', name: 'gradle-build-maven-credentials', version: '1.0.0-SNAPSHOT'
+    classpath group: 'info.boaventura', name: 'gradle-build-maven-credentials', version: '1.0.0'
   }
 }
 apply plugin: 'info.boaventura.maven.credentials'
